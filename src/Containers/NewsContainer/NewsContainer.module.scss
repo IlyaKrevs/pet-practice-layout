@@ -1,0 +1,55 @@
+@import '../../vars-scss/vars';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+
+    @media (max-width: 1023px) {
+        padding: 0;
+    }
+}
+
+.main__title {
+    @include text-title;
+    color: $text-main;
+    padding-bottom: 30px;
+}
+
+.main__newsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include text-main;
+    color: $text-main;
+
+
+    @media (max-width: 1023px) {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr);
+    }
+
+    & span {
+        color: $text-main-light
+    }
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-bottom: 1px solid rgba(47, 34, 34, 0.1);
+        padding: 10px 0;
+    }
+
+    & li:last-child {
+        border-bottom: none;
+        padding-bottom: 40px;
+    }
+
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+    }
+}

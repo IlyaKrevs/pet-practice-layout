@@ -1,0 +1,51 @@
+// colours
+$first: rgba(255, 255, 255, 1);
+$second: rgba(93, 113, 221, 1);
+
+$text-main: rgba(47, 34, 34, 1);
+$text-main-light: rgba(47, 34, 34, 0.4);
+
+// media size
+
+@mixin trim {
+    //1920
+    padding-left: calc(50% - 700px);
+    padding-right: calc(50% - 700px);
+
+    // 1024
+    @media (max-width: 1920px) {
+        padding-left: calc(50% - 470px);
+        padding-right: calc(50% - 470px);
+    }
+
+    @media (max-width: 1023px) {
+        padding-left: calc(50% - 140px);
+        padding-right: calc(50% - 140px);
+    }
+}
+
+// fonts
+@mixin text($weight, $size, $line-height) {
+    font-family: "Futura PT";
+    font-size: #{$size}px;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: #{$line-height}px;
+}
+
+
+@mixin text-title {
+    @include text(450, 24, 30.77);
+}
+
+@mixin text-main {
+    @include text(400, 18, 23.08);
+}
+
+@mixin text-small {
+    @include text(400, 16, 20.51);
+}
+
+@mixin text-smallest {
+    @include text(400, 14, 17.95);
+}

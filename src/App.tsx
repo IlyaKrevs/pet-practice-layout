@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import classes from './App.module.scss';
+import { ItemCard } from './Components/ItemCard/ItemCard';
+import { MainLogo } from './Components/MainLogo/MainLogo';
+import { Header } from './Components/Header/Header';
+import { CardsContainer } from './Containers/CardsContainer/CardsContainer';
+import { NewsContainer } from './Containers/NewsContainer/NewsContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+      <Header />
+      <div className={classes.imageContainer}></div>
+
+      <main className={classes.mainContainer}>
+        <CardsContainer />
+        <NewsContainer />
+      </main>
+
+      <footer className={classes['footer-main']}>
+        <MainLogo />
+        <nav className={classes['footer-main__nav']}>
+          <ul>
+            <li>О нас</li>
+            <li>Галерея</li>
+            <li>Новости</li>
+            <li>Контакты</li>
+          </ul>
+
+        </nav>
+        <span>ООО “Организация” 2020. Все права защищены</span>
+      </footer>
     </div>
   );
 }
 
 export default App;
+
+

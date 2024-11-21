@@ -1,0 +1,79 @@
+@import '../../vars-scss/vars';
+
+.main {
+    background-color: $first;
+    border-radius: 20px;
+    padding: 40px 30px 50px;
+
+    & .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @media (max-width: 1023px) {
+        padding: 40px 148px;
+
+        & .wrapper {
+            display: grid;
+            grid-template: 1fr / 2fr 1fr;
+        }
+    }
+
+
+    @media (max-width: 1023px) {
+        padding: 40px 20px;
+
+        & .main__title {
+            padding-bottom: 30px;
+        }
+
+        .wrapper {
+
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+
+
+.main__title {
+    padding-bottom: 10px;
+
+    @include text-title;
+    color: $text-main;
+}
+
+
+
+.inputContainer {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 13px 32px;
+    background-color: rgba(245, 245, 245, 1);
+
+    border: none;
+
+    &:focus {
+        outline: 2px solid $second;
+    }
+}
+
+
+.btnContainer {
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 32px;
+
+    background-color: $second;
+    color: $first;
+
+    @include text-main;
+}

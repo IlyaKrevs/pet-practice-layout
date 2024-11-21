@@ -1,0 +1,47 @@
+@import './../../vars-scss/vars';
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 70px;
+
+    @include trim;
+
+}
+
+.navBar {
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: $text-main;
+        @include text-main;
+    }
+
+    & li:hover {
+        cursor: pointer;
+        color: $second;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 1023px) {
+        & ul {
+            gap: 5px;
+            @include text-small;
+        }
+    }
+}
+
+.specialItem {
+    color: $second;
+    display: flex;
+    gap: 5px;
+
+    @include text-title;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}

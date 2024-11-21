@@ -1,0 +1,114 @@
+@import './../../vars-scss/vars';
+
+
+.main {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: $first;
+
+    cursor: pointer;
+
+    display: grid;
+    grid-template: 40px 1fr / 1fr 1fr;
+    grid-template-areas:
+        'a b'
+        'c c';
+    row-gap: 30px;
+
+    &:hover {
+        box-shadow: 4px 8px 40px 0px rgba(8, 24, 111, 0.2);
+    }
+
+    height: 100%;
+
+    @media (max-width: 1023px) {
+        padding: 40px 30px;
+        grid-template: 40px auto 40px / 1fr;
+        grid-template-areas:
+            'a'
+            'c'
+            'b';
+    }
+}
+
+.main--specialStyle {
+    grid-template: 40px auto 40px / 1fr;
+    grid-template-areas:
+        'a'
+        'c'
+        'b';
+
+    background-color: $second;
+
+
+    padding: 40px 30px;
+
+    & .main__category {
+        color: $first;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    & .main__date {
+        justify-self: start;
+        color: $first;
+    }
+
+    & .main__title {
+        color: $first;
+    }
+}
+
+.main--haveImage {
+    background-image: url('./../../assets/cardBgImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__category {
+    grid-area: a;
+
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    color: $second;
+
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(93, 113, 221, 0.05);
+}
+
+.main__date {
+    grid-area: b;
+
+    width: fit-content;
+
+    justify-self: end;
+    align-self: center;
+
+    color: $text-main-light;
+}
+
+.main__text {
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main__title {
+    @include text-title;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: $text-main;
+}
+
+.main__description {
+    @include text-main;
+    color: $text-main-light;
+}

@@ -1,0 +1,114 @@
+@import '../../vars-scss/vars';
+
+.mainContainer {
+    padding-top: 40px;
+}
+
+.grid-container {
+    padding-top: 40px;
+    display: grid;
+
+    grid-template-columns: 320px 1fr 320px;
+    grid-template-rows: repeat(4, 1fr);
+
+    grid-template-areas:
+        'a a b'
+        'a a b'
+        'c d d'
+        'c e e';
+    gap: 40px;
+
+
+    @media (max-width: 1023px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.grid-item:nth-child(1) {
+    grid-area: a;
+}
+
+.grid-item:nth-child(2) {
+    grid-area: b;
+}
+
+.grid-item:nth-child(3) {
+    grid-area: c;
+}
+
+.grid-item:nth-child(4) {
+    grid-area: d;
+}
+
+.grid-item:nth-child(5) {
+    grid-area: e;
+}
+
+.grid-item:nth-child(6) {
+    grid-area: f;
+}
+
+.grid-item:nth-child(7) {
+    grid-area: g;
+}
+
+.pagination {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    @include text-main;
+    color: black;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    & ul {
+        display: flex;
+        gap: 20px;
+        cursor: pointer;
+
+        & :hover {
+            text-decoration: underline;
+            color: $second;
+        }
+    }
+
+
+    @media (max-width: 1024px) {
+        padding: 40px 0;
+        ;
+        gap: 5px;
+    }
+}
+
+.nextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: rgba(93, 113, 221, 0.05);
+    gap: 10px;
+
+    color: $second;
+
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    & span {
+        height: 7px;
+        width: 7px;
+        border-right: 1px solid $second;
+        border-bottom: 1px solid $second;
+        transform: rotate(-45deg);
+    }
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}

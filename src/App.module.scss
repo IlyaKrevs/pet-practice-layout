@@ -1,0 +1,86 @@
+@import './vars-scss/vars';
+
+.App {
+  min-height: 100vh;
+
+  background-color: rgba(249, 249, 249, 1);
+}
+
+.imageContainer {
+  height: 300px;
+  background-image: url('./assets/bgImage.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1920px) {
+    height: 250px;
+  }
+
+  @media (max-width: 1023px) {
+    height: 150px;
+  }
+}
+
+.mainContainer {
+  @include trim;
+
+  display: grid;
+  grid-template: 1fr / 1fr 320px;
+  gap: 40px;
+
+
+  @media (max-width: 1920px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  & .footer-main__nav {
+    padding-bottom: 24px;
+
+    & ul {
+      display: flex;
+      gap: 80px;
+      @include text-main;
+      color: $text-main;
+
+      & li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: $second;
+      }
+    }
+
+  }
+
+  & span {
+    @include text-small;
+    color: $text-main-light;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 40px;
+
+    & .footer-main__nav {
+      & ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    & span {
+      @include trim;
+      text-align: center;
+    }
+  }
+}

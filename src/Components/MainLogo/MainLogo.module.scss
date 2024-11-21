@@ -1,0 +1,25 @@
+@import '../../vars-scss/vars';
+
+.circle {
+    border-radius: 50%;
+}
+
+.outer {
+    height: 48px;
+    width: 48px;
+    background-color: $second;
+    position: relative;
+
+    cursor: pointer;
+}
+
+.inner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $first;
+
+    width: 26px;
+    height: 26px;
+    box-shadow: 0px 4px 4px 0px rgba(57, 70, 136, 0.18);
+}
