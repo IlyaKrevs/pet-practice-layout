@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pet-practice-layout/static/css/main.9261dd7a.css",
+    "main.js": "/pet-practice-layout/static/js/main.a86d11e5.js",
+    "static/media/bgImage.jpg": "/pet-practice-layout/static/media/bgImage.2f93b36299019cf43438.jpg",
+    "static/media/cardBgImage.jpg": "/pet-practice-layout/static/media/cardBgImage.f3689adb022ce7c90110.jpg",
+    "static/media/phone.svg": "/pet-practice-layout/static/media/phone.18d388f95a295a11ba921d80a12cc2a4.svg",
+    "index.html": "/pet-practice-layout/index.html",
+    "main.9261dd7a.css.map": "/pet-practice-layout/static/css/main.9261dd7a.css.map",
+    "main.a86d11e5.js.map": "/pet-practice-layout/static/js/main.a86d11e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9261dd7a.css",
+    "static/js/main.a86d11e5.js"
+  ]
+}
